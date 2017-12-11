@@ -2,12 +2,10 @@ var office = ["Michael Scott", "Dwight Schrute", "Jim Halpert", "Creed Bratton",
 $("#buttons").append(office);
 var authKey
 function displayGif() {
-	$('button').on("click", function()) {
+	$('#buttons').on("click", function()) {
 
 	var character = $(this).atrr("data-name");
-	// var queryURL = "https:api.giphy.com/v1/gifs/search?q=" + character + "&api_key=dc6zaTOxFJmzC&limit=5";
-	var queryURL = "https://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=" + character;
-
+	var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + character + "&api_key=YsohIxnEqrKiWeq8gEndUXsWFjWLN0m1&limit=5"
 
 	$.ajax({
 		url: queryURL,
@@ -18,7 +16,7 @@ function displayGif() {
 		for (var i = 0; i< results.length; i++) {
 			var gifDiv = $("<div class = 'item'>")
 			var personImage = $("<img>");
-			personImage.atrr("src", results[i].images.fixed_height.url);
+			personImage.attr("src", results[i].images.fixed_height.url);
 
 			gifDiv.prepend(personImage);
 			$("#gifs-appear-here").prepend(gifDiv);
