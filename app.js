@@ -8,7 +8,7 @@ var authKey =  "YsohIxnEqrKiWeq8gEndUXsWFjWLN0m1&limit=5"
 $('#buttons-view').on("click", ".character", function() {
 		console.log("click");
 	var character = $(this).attr("data-name");
-	var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + character + "&api_key=YsohIxnEqrKiWeq8gEndUXsWFjWLN0m1&limit=5"
+	var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + character + "&api_key=YsohIxnEqrKiWeq8gEndUXsWFjWLN0m1&limit=5"
 
 	$.ajax({
 		url: queryURL,
